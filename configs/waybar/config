@@ -1,0 +1,126 @@
+
+// ╔═══════════════════════════════════════════════════════════╗
+// ║  WAYBAR CONFIG V3 - CYBERPUNK DYSTOPIA THEME             ║
+// ║  Save as: ~/.config/waybar/config                        ║
+// ╚═══════════════════════════════════════════════════════════╝
+{
+    "layer": "top",
+    "position": "top",
+    "height": 40,
+    "spacing": 10,
+    
+    // Layout: Workspaces (left), Launcher (center), System tools + Clock (right)
+    "modules-left": ["hyprland/workspaces", "hyprland/window"],
+    "modules-center": ["custom/launcher"],
+    "modules-right": ["pulseaudio", "network", "battery", "clock"],
+
+    // ========================================
+    // WORKSPACES MODULE
+    // ========================================
+    "hyprland/workspaces": {
+        "format": "{icon}",
+        "format-icons": {
+            "1": "1",
+            "2": "2",
+            "3": "3",
+            "4": "4",
+            "5": "5",
+            "6": "6",
+            "7": "7",
+            "8": "8",
+            "9": "9",
+            "10": "10",
+            "active": "",
+            "default": ""
+        },
+        "persistent-workspaces": {
+            "*": 5
+        },
+        "on-click": "activate"
+    },
+
+    // ========================================
+    // WINDOW TITLE MODULE (shows active app)
+    // ========================================
+    "hyprland/window": {
+        "format": "{}",
+        "max-length": 50,
+        "separate-outputs": true
+    },
+
+    // ========================================
+    // CUSTOM LAUNCHER MODULE
+    // ========================================
+    "custom/launcher": {
+        "format": " ",
+        "on-click": "wofi --show drun",
+        "tooltip": false
+    },
+
+    // ========================================
+    // CLOCK MODULE
+    // ========================================
+    "clock": {
+        "format": "{:%I:%M %p}",
+        "format-alt": "{:%A, %B %d, %Y}",
+        "tooltip-format": "<tt><small>{calendar}</small></tt>",
+        "calendar": {
+            "mode": "month",
+            "mode-mon-col": 3,
+            "weeks-pos": "right",
+            "on-scroll": 1,
+            "format": {
+                "months": "<span color='#ff006e'><b>{}</b></span>",
+                "days": "<span color='#00ff41'><b>{}</b></span>",
+                "weeks": "<span color='#00d9ff'><b>W{}</b></span>",
+                "weekdays": "<span color='#bd00ff'><b>{}</b></span>",
+                "today": "<span color='#ff006e'><b><u>{}</u></b></span>"
+            }
+        }
+    },
+
+    // ========================================
+    // BATTERY MODULE
+    // ========================================
+    "battery": {
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{icon} {capacity}%",
+        "format-charging": " {capacity}%",
+        "format-plugged": " {capacity}%",
+        "format-icons": ["", "", "", "", ""],
+        "tooltip-format": "{timeTo}, {capacity}%"
+    },
+
+    // ========================================
+    // NETWORK MODULE
+    // ========================================
+    "network": {
+        "format-wifi": " {essid}",
+        "format-ethernet": " Connected",
+        "format-disconnected": "⚠ Disconnected",
+        "tooltip-format": "{ifname}: {ipaddr}/{cidr}\nSignal: {signalStrength}%",
+        "on-click": "nm-connection-editor"
+    },
+
+    // ========================================
+    // AUDIO MODULE
+    // ========================================
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "format-muted": " Muted",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", "", ""]
+        },
+        "on-click": "pavucontrol",
+        "tooltip-format": "Volume: {volume}%"
+    }
+}
