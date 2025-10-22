@@ -59,7 +59,7 @@ SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 if [ ! -d "$SCRIPT_DIR/configs" ]; then
     echo -e "${RED}❌ Config directory not found!${NC}"
     echo "Make sure you're running this from the cloned repository:"
-    echo "  git clone https://github.com/YOUR_USERNAME/cyberpunk-hyprland"
+    echo "  git clone https://github.com/Expert21/cyberpunk-hyprland"
     echo "  cd cyberpunk-hyprland"
     echo "  chmod +x setup.sh"
     echo "  ./setup.sh"
