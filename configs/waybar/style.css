@@ -1,0 +1,220 @@
+
+// ╔═══════════════════════════════════════════════════════════╗
+// ║  WAYBAR STYLE V3 - CYBERPUNK DYSTOPIA THEME              ║
+// ║  Save as: ~/.config/waybar/style.css                     ║
+// ╚═══════════════════════════════════════════════════════════╝
+
+* {
+    font-family: "JetBrainsMono Nerd Font", "Font Awesome 6 Free", sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    border-radius: 0;
+    min-height: 0;
+}
+
+/* ========================================
+   MAIN WINDOW - TRANSPARENT BACKGROUND
+   ======================================== */
+window#waybar {
+    background: transparent;
+    color: #00ff41;
+}
+
+/* ========================================
+   MODULE BASE STYLING - CYBERPUNK GLASS
+   ======================================== */
+#workspaces,
+#window,
+#custom-launcher,
+#clock,
+#battery,
+#network,
+#pulseaudio {
+    /* Dark transparent background with purple tint */
+    background: rgba(10, 0, 20, 0.4);
+    padding: 0 15px;
+    margin: 5px 0;
+    border-radius: 10px;
+    
+    /* Purple neon border */
+    border: 1px solid rgba(189, 0, 255, 0.3);
+    
+    /* Smooth transitions */
+    transition: all 0.3s ease-in-out;
+}
+
+/* ========================================
+   HOVER EFFECTS - NEON GLOW
+   ======================================== */
+#workspaces:hover,
+#window:hover,
+#custom-launcher:hover,
+#clock:hover,
+#battery:hover,
+#network:hover,
+#pulseaudio:hover {
+    /* Darker background on hover */
+    background: rgba(10, 0, 20, 0.95);
+    
+    /* Pink neon border */
+    border: 1px solid rgba(255, 0, 110, 0.8);
+    
+    /* Outer pink glow + inner purple glow */
+    box-shadow: 0 0 20px rgba(255, 0, 110, 0.6),
+                inset 0 0 10px rgba(189, 0, 255, 0.3);
+}
+
+/* ========================================
+   WORKSPACES STYLING
+   ======================================== */
+#workspaces {
+    padding: 0 5px;
+}
+
+#workspaces button {
+    padding: 0 8px;
+    color: #bd00ff;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Active workspace - pink neon */
+#workspaces button.active {
+    color: #ff006e;
+    background: rgba(255, 0, 110, 0.2);
+    box-shadow: 0 0 10px rgba(255, 0, 110, 0.5);
+}
+
+/* Hover effect for workspaces */
+#workspaces button:hover {
+    background: rgba(189, 0, 255, 0.3);
+    color: #00ff41;
+    box-shadow: 0 0 8px rgba(0, 255, 65, 0.4);
+}
+
+/* ========================================
+   WINDOW TITLE STYLING
+   ======================================== */
+#window {
+    color: #bd00ff;
+    font-style: italic;
+}
+
+/* ========================================
+   LAUNCHER STYLING - CENTER ICON
+   ======================================== */
+#custom-launcher {
+    font-size: 20px;
+    color: #00ff41;
+    padding: 0 20px;
+    text-shadow: 0 0 10px rgba(0, 255, 65, 0.7);
+}
+
+#custom-launcher:hover {
+    color: #ff006e;
+    text-shadow: 0 0 15px rgba(255, 0, 110, 0.9);
+}
+
+/* ========================================
+   CLOCK STYLING - CYAN NEON
+   ======================================== */
+#clock {
+    color: #00d9ff;
+    font-weight: bold;
+    text-shadow: 0 0 8px rgba(0, 217, 255, 0.6);
+}
+
+#clock:hover {
+    text-shadow: 0 0 15px rgba(0, 217, 255, 0.9);
+}
+
+/* ========================================
+   BATTERY STYLING - COLOR CODED
+   ======================================== */
+#battery {
+    color: #00ff41;
+    text-shadow: 0 0 8px rgba(0, 255, 65, 0.5);
+}
+
+/* Charging state - cyan */
+#battery.charging {
+    color: #00d9ff;
+    text-shadow: 0 0 10px rgba(0, 217, 255, 0.7);
+}
+
+/* Warning state - orange */
+#battery.warning:not(.charging) {
+    color: #ff9500;
+    text-shadow: 0 0 10px rgba(255, 149, 0, 0.7);
+}
+
+/* Critical state - pulsing pink */
+#battery.critical:not(.charging) {
+    color: #ff006e;
+    text-shadow: 0 0 15px rgba(255, 0, 110, 0.9);
+    animation: blink 1s linear infinite;
+}
+
+/* Pulsing animation for critical battery */
+@keyframes blink {
+    0%, 100% {
+        opacity: 1;
+        text-shadow: 0 0 15px rgba(255, 0, 110, 0.9);
+    }
+    50% {
+        opacity: 0.5;
+        text-shadow: 0 0 5px rgba(255, 0, 110, 0.5);
+    }
+}
+
+/* ========================================
+   NETWORK STYLING - PURPLE NEON
+   ======================================== */
+#network {
+    color: #bd00ff;
+    text-shadow: 0 0 8px rgba(189, 0, 255, 0.6);
+}
+
+#network:hover {
+    text-shadow: 0 0 15px rgba(189, 0, 255, 0.9);
+}
+
+/* Disconnected state - pink */
+#network.disconnected {
+    color: #ff006e;
+    text-shadow: 0 0 10px rgba(255, 0, 110, 0.7);
+}
+
+/* ========================================
+   AUDIO STYLING - PINK NEON
+   ======================================== */
+#pulseaudio {
+    color: #ff006e;
+    text-shadow: 0 0 8px rgba(255, 0, 110, 0.6);
+}
+
+#pulseaudio:hover {
+    text-shadow: 0 0 15px rgba(255, 0, 110, 0.9);
+}
+
+/* Muted state - dark purple */
+#pulseaudio.muted {
+    color: #5a0066;
+    text-shadow: none;
+}
+
+/* ========================================
+   TOOLTIP STYLING - CYBERPUNK POPUP
+   ======================================== */
+tooltip {
+    background: rgba(10, 0, 20, 0.95);
+    border: 2px solid #ff006e;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(255, 0, 110, 0.5);
+}
+
+tooltip label {
+    color: #00ff41;
+    text-shadow: 0 0 5px rgba(0, 255, 65, 0.5);
+}
