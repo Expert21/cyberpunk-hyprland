@@ -1,0 +1,46 @@
+
+# ╔═══════════════════════════════════════════════════════════╗
+# ║  WOFI CONFIG V3 - CYBERPUNK DYSTOPIA THEME               ║
+# ║  Save as: ~/.config/wofi/config                          ║
+# ╚═══════════════════════════════════════════════════════════╝
+
+# Window dimensions
+width=600
+height=400
+
+# Center the launcher on screen
+location=center
+
+# Show applications
+show=drun
+
+# Prompt text
+prompt=Launch...
+
+# Search filter rate
+filter_rate=100
+
+# Enable markup for styling
+allow_markup=true
+
+# Disable right-click actions
+no_actions=true
+
+# Fill horizontal space
+halign=fill
+
+# Vertical orientation
+orientation=vertical
+
+# Content alignment
+content_halign=fill
+
+# Case insensitive search
+insensitive=true
+
+# Show application icons
+allow_images=true
+image_size=32
+
+# Use GTK dark theme
+gtk_dark=true
