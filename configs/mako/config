@@ -1,0 +1,140 @@
+
+# ╔═══════════════════════════════════════════════════════════╗
+# ║  MAKO NOTIFICATION DAEMON V3 - CYBERPUNK DYSTOPIA THEME  ║
+# ║  Save as: ~/.config/mako/config                          ║
+# ╚═══════════════════════════════════════════════════════════╝
+
+# ============================================================
+# GENERAL SETTINGS
+# ============================================================
+
+# Font
+font=JetBrainsMono Nerd Font 11
+
+# Notification format: app name in bold, summary, and body
+format=<b>%a</b>\n%s\n%b
+
+# Sort by time, newest first
+sort=-time
+
+# Show notifications on all outputs
+output=
+
+# Layer for notifications (overlay is on top)
+layer=overlay
+
+# Anchor position: top-right corner
+anchor=top-right
+
+# ============================================================
+# DIMENSIONS & POSITIONING
+# ============================================================
+
+# Width and height
+width=350
+height=150
+
+# Margin from screen edges (top, right, bottom, left)
+margin=20,20,0,0
+
+# Padding inside notification
+padding=15,15
+
+# ============================================================
+# COLORS - CYBERPUNK THEME
+# ============================================================
+
+# Background: Dark transparent with purple tint
+background-color=#0a0014E6
+
+# Text color: Neon green
+text-color=#00ff41
+
+# Border
+border-size=2
+border-color=#ff006e
+border-radius=12
+
+# ============================================================
+# PROGRESS BAR COLORS
+# ============================================================
+
+# Progress bar background
+progress-color=over #1a0033
+
+# ============================================================
+# ICONS
+# ============================================================
+
+# Show icons
+icons=1
+max-icon-size=48
+icon-location=left
+
+# Icon path (system icons)
+icon-path=/usr/share/icons/hicolor
+
+# ============================================================
+# BEHAVIOR
+# ============================================================
+
+# Default timeout in milliseconds (5 seconds)
+default-timeout=5000
+
+# Ignore timeout from applications
+ignore-timeout=0
+
+# Max number of visible notifications
+max-visible=5
+
+# Group notifications by app name
+group-by=app-name
+
+# ============================================================
+# URGENCY LEVELS - COLOR CODED
+# ============================================================
+
+# Low urgency: Purple border
+[urgency=low]
+border-color=#bd00ff
+default-timeout=3000
+
+# Normal urgency: Pink border (default above)
+[urgency=normal]
+border-color=#ff006e
+default-timeout=5000
+
+# Critical urgency: Orange border, no timeout
+[urgency=critical]
+border-color=#ff9500
+text-color=#ff9500
+default-timeout=0
+ignore-timeout=1
+
+# ============================================================
+# APP-SPECIFIC OVERRIDES (OPTIONAL)
+# ============================================================
+
+# Battery notifications - green border when charging
+[app-name="Power"]
+border-color=#00ff41
+
+# Volume notifications - cyan border
+[app-name="Volume"]
+border-color=#00d9ff
+default-timeout=2000
+
+# Network notifications - purple border
+[app-name="Network"]
+border-color=#bd00ff
+
+# ============================================================
+# INTERACTION
+# ============================================================
+
+# Actions
+# on-button-left=dismiss
+# on-button-middle=none
+# on-button-right=dismiss-all
+# on-touch=dismiss
+# on-notify=exec mpv /usr/share/sounds/freedesktop/stereo/message.oga
