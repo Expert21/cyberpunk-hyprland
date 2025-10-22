@@ -1,0 +1,80 @@
+# ╔═══════════════════════════════════════════════════════════╗
+# ║  CUSTOM GTK CSS V3 - CYBERPUNK ACCENTS (OPTIONAL)       ║
+# ║  Save as: ~/.config/gtk-3.0/gtk.css                      ║
+# ║  This adds cyberpunk color accents to GTK apps           ║
+# ╚═══════════════════════════════════════════════════════════╝
+
+/* Cyberpunk accent colors for selections and highlights */
+
+/* Selection background - neon pink */
+*:selected {
+    background-color: #ff006e;
+    color: #0a0014;
+}
+
+/* Links - cyan neon */
+link {
+    color: #00d9ff;
+}
+
+link:hover {
+    color: #40e5ff;
+}
+
+/* Focus borders - purple neon */
+*:focus {
+    outline-color: #bd00ff;
+    outline-style: solid;
+    outline-width: 2px;
+}
+
+/* Buttons - subtle cyberpunk styling */
+button {
+    border-radius: 8px;
+    border: 1px solid rgba(189, 0, 255, 0.3);
+}
+
+button:hover {
+    background-color: rgba(189, 0, 255, 0.2);
+    border-color: #bd00ff;
+}
+
+button:active {
+    background-color: rgba(255, 0, 110, 0.2);
+    border-color: #ff006e;
+}
+
+/* Switches - neon green when active */
+switch:checked {
+    background-color: #00ff41;
+}
+
+switch slider {
+    border-radius: 50%;
+}
+
+/* Progress bars - neon gradient */
+progressbar progress {
+    background-image: linear-gradient(to right, #ff006e, #00ff41);
+}
+
+/* Scrollbars - cyberpunk colors */
+scrollbar slider {
+    background-color: rgba(189, 0, 255, 0.5);
+    border-radius: 8px;
+}
+
+scrollbar slider:hover {
+    background-color: rgba(255, 0, 110, 0.7);
+}
+
+/* Entry/Input fields - subtle glow */
+entry {
+    border-radius: 8px;
+    border: 1px solid rgba(189, 0, 255, 0.3);
+}
+
+entry:focus {
+    border-color: #ff006e;
+    box-shadow: 0 0 5px rgba(255, 0, 110, 0.5);
+}
