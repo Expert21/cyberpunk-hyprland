@@ -1,80 +1,105 @@
 # ╔═══════════════════════════════════════════════════════════╗
-# ║  CUSTOM GTK CSS V3 - CYBERPUNK ACCENTS (OPTIONAL)       ║
+# ║  CUSTOM GTK CSS V3 - CYBERPUNK ACCENTS WITH GLOW         ║
 # ║  Save as: ~/.config/gtk-3.0/gtk.css                      ║
 # ║  This adds cyberpunk color accents to GTK apps           ║
 # ╚═══════════════════════════════════════════════════════════╝
 
-/* Cyberpunk accent colors for selections and highlights */
+/* ────────────────────────────── */
+/* Cyberpunk GTK Theme with Glow */
+/* ────────────────────────────── */
 
-/* Selection background - neon pink */
-*:selected {
+/* Main window background - translucent purple */
+window,
+window.csd {
+    background-color: rgba(26, 0, 51, 0.85);
+    color: #00ff41;
+    text-shadow: 0 0 2px #00ff41;
+}
+
+/* Headerbars / Titlebars - translucent purple with pink accent */
+headerbar,
+.header-bar,
+.toolbar {
+    background-color: rgba(26, 0, 51, 0.9);
+    border-bottom: 1px solid #ff006e;
+    color: #00ff41;
+    text-shadow: 0 0 2px #00ff41;
+}
+
+/* Sidebar / Lists - darker purple with border */
+sidebar,
+.treeview,
+.listview,
+.view {
+    background-color: rgba(10, 0, 20, 0.9);
+    border-right: 1px solid rgba(189, 0, 255, 0.3);
+    color: #00ff41;
+    text-shadow: 0 0 2px #00ff41;
+}
+
+/* Pathbar / Entry fields - darker purple */
+entry,
+.path-bar,
+.pathbar {
+    background-color: rgba(10, 0, 20, 0.9);
+    border: 1px solid rgba(189, 0, 255, 0.3);
+    color: #00ff41;
+    text-shadow: 0 0 2px #00ff41;
+}
+
+/* Main content area - translucent purple */
+view,
+textview text,
+.listview row,
+.iconview {
+    background-color: rgba(26, 0, 51, 0.75);
+    color: #00ff41;
+    text-shadow: 0 0 2px #00ff41;
+}
+
+/* Selected items - neon pink with glow */
+view:selected,
+treeview:selected,
+listview row:selected,
+.iconview:selected,
+button:selected {
+    background-color: rgba(255, 0, 110, 0.3);
+    color: #ff006e;
+    text-shadow: 0 0 4px #ff006e;
+    box-shadow: 0 0 6px #ff006e inset;
+}
+
+/* Buttons - neon green text with purple background */
+button,
+.button {
+    background-color: rgba(26, 0, 51, 0.8);
+    color: #00ff41;
+    border: 1px solid #ff006e;
+    text-shadow: 0 0 2px #00ff41;
+    box-shadow: 0 0 4px #ff006e;
+    border-radius: 4px;
+}
+
+/* Context menus / Popovers - dark purple */
+menu,
+.menu,
+popover {
+    background-color: rgba(10, 0, 20, 0.95);
+    border: 1px solid #bd00ff;
+    color: #00ff41;
+    text-shadow: 0 0 2px #00ff41;
+}
+
+/* Scrollbars - neon purple */
+scrollbar,
+.scrollbar {
+    background-color: rgba(26, 0, 51, 0.7);
+}
+
+/* Scrollbar handles - neon pink with glow */
+scrollbar slider,
+.scrollbar slider {
     background-color: #ff006e;
-    color: #0a0014;
-}
-
-/* Links - cyan neon */
-link {
-    color: #00d9ff;
-}
-
-link:hover {
-    color: #40e5ff;
-}
-
-/* Focus borders - purple neon */
-*:focus {
-    outline-color: #bd00ff;
-    outline-style: solid;
-    outline-width: 2px;
-}
-
-/* Buttons - subtle cyberpunk styling */
-button {
-    border-radius: 8px;
-    border: 1px solid rgba(189, 0, 255, 0.3);
-}
-
-button:hover {
-    background-color: rgba(189, 0, 255, 0.2);
-    border-color: #bd00ff;
-}
-
-button:active {
-    background-color: rgba(255, 0, 110, 0.2);
-    border-color: #ff006e;
-}
-
-/* Switches - neon green when active */
-switch:checked {
-    background-color: #00ff41;
-}
-
-switch slider {
-    border-radius: 50%;
-}
-
-/* Progress bars - neon gradient */
-progressbar progress {
-    background-image: linear-gradient(to right, #ff006e, #00ff41);
-}
-
-/* Scrollbars - cyberpunk colors */
-scrollbar slider {
-    background-color: rgba(189, 0, 255, 0.5);
-    border-radius: 8px;
-}
-
-scrollbar slider:hover {
-    background-color: rgba(255, 0, 110, 0.7);
-}
-
-/* Entry/Input fields - subtle glow */
-entry {
-    border-radius: 8px;
-    border: 1px solid rgba(189, 0, 255, 0.3);
-}
-
-entry:focus {
-    border-color: #ff006e;
-    box-shadow: 0 0 5px rgba(255, 0, 110, 0.5);
+    border-radius: 4px;
+    box-shadow: 0 0 4px #ff006e;
 }
