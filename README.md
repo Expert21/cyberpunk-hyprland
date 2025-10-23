@@ -37,7 +37,7 @@ chmod +x setup.sh
 ./setup.sh
 ```
 
-### Manual Install (Advanced) (Recommended)
+### Manual Install (Advanced)
 Step-by-step installation with prompts for each component:
 ```bash
 git clone https://github.com/Expert21/cyberpunk-hyprland
