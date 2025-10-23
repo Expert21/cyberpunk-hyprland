@@ -28,7 +28,7 @@ A complete Hyprland desktop environment with a cyberpunk dystopia aesthetic feat
 - Internet connection
 - `git` installed
 
-### Quick Install (Recommended)
+### Quick Install (Beginner friendly)
 Fully automated, zero manual intervention:
 ```bash
 git clone https://github.com/Expert21/cyberpunk-hyprland
@@ -37,7 +37,7 @@ chmod +x setup.sh
 ./setup.sh
 ```
 
-### Manual Install (Advanced)
+### Manual Install (Advanced) (Recommended)
 Step-by-step installation with prompts for each component:
 ```bash
 git clone https://github.com/Expert21/cyberpunk-hyprland
