@@ -173,6 +173,9 @@ sudo pacman -S --needed --noconfirm \
 
 echo -e "${GREEN}✓${NC} Screenshot tools installed"
 
+# Fix jack2 conflict
+sudo pacman -Rdd --noconfirm jack2 2>/dev/null || true
+
 # Audio
 sudo pacman -S --needed --noconfirm \
     pipewire \
@@ -400,6 +403,7 @@ echo ""
 # COMPLETION
 # ============================================================
 
+
 echo -e "${MAGENTA}"
 cat << "EOF"
 ╔════════════════════════════════════════════════════════════╗
@@ -447,4 +451,4 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
 else
     echo "Remember to reboot before using Hyprland!"
     echo "Run: ${YELLOW}sudo reboot${NC}"
-fi`
+fi
